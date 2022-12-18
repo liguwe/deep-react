@@ -7,14 +7,14 @@ import React, {useState, useMemo, memo} from "react";
 
 class Greeting extends React.Component {
     render() {
-        console.log('PureComponent');
+        console.log('React.Component render....');
         return <h1>Hello, {this.props.name}</h1>;
     }
 }
 
 
 const MemoGreeting = React.memo(Greeting, (prevProps, nextProps) => {
-    console.log(nextProps,prevProps);
+    // console.log(nextProps,prevProps);
     console.log(prevProps.name !== nextProps.name);
     // ::::返回true,就阻止渲染了，但请不用
     // ::::此方法仅作为性能优化的方式而存在。但请不要依赖它来“阻止”渲染，因为这会产生 bug。

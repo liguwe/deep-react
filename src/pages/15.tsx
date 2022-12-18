@@ -7,7 +7,7 @@
  ************************************************/
 import React, {useCallback, useEffect, useRef, useState} from "react";
 
-// // 832: 注意：ExpensiveTree 比较耗时记得使用`React.memo`优化下，要不然父组件优化也没用
+// // 832: 注意：ExpensiveTree 比较耗时记得使用 `React.memo` 优化下，要不然父组件优化也没用
 const ExpensiveTree = React.memo(function (props) {
 
     console.log('Render ExpensiveTree')

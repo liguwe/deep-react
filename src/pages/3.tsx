@@ -14,7 +14,8 @@ import React, {useState, useCallback} from 'react';
 
 
 const TestButton = React.memo((props: any) => {
-    console.log(props.title)
+    // console.log(props.title)
+    console.log(1111)
     return <button onClick={props.onClick}
                    style={props.title === 'useCallback点击' ? {
                        marginLeft: 20
@@ -34,10 +35,10 @@ const MockMemo: React.FC<any> = () => {
     return (
         <div>
             <div style={{display: 'flex', justifyContent: 'flex-start'}}>
-                <TestButton title="普通点击"
+                <TestButton title="普通点击+1"
                             onClick={() => setCount(count + 1)}
                 />
-                <TestButton title="useCallback点击" onClick={add}/>
+                <TestButton title="useCallback点击+1" onClick={add}/>
             </div>
 
             <div style={{marginTop: 20}}>count: {count}</div>

@@ -23,7 +23,7 @@
 import React, {useState,} from 'react';
 
 
-// ::::父组件的任何props变化（包括其他的参数），都会导致它重新渲染
+//::::父组件的任何props变化（包括其他的参数），都会导致它重新渲染
 const Child = (props = {}) => {
     console.log(`--- Child re-render ---`);
     return (

@@ -13,13 +13,20 @@ const usePow = (list: number[]) => {
 }
 
 const Index = (props: any) => {
+
     const [flag, setFlag] = useState<boolean>(true)
+
     const data = usePow([1, 2, 3])
+
+    console.log(3);  //  打印3次
+    // ::::
     return (
         <div>
             <div>数字：{JSON.stringify(data)}</div>
             <button onClick={() => {
-                setFlag(v => !v)
+                // ::::注意这里，改成false后就不再更改了，但是只会打印3次
+                setFlag(false)
+                // setFlag(v => !v)
             }}>切换
             </button>
             <div>切换状态：{JSON.stringify(flag)}</div>

@@ -6,10 +6,10 @@
  ************************************************/
 
 import React, {useState, useMemo, memo} from "react";
-class Greeting extends React.PureComponent {
 
+class Greeting extends React.PureComponent {
     render() {
-        console.log('PureComponent');
+        console.log('PureComponent render....');
         return <h1>Hello, {this.props.name}</h1>;
     }
 }
@@ -26,9 +26,9 @@ export default function App() {
             <h1>Hello CodeSandbox</h1>
             <h2>{count}</h2>
             <button onClick={handleClick}>click</button>
-            <Greeting/>
+            {/*<Greeting name={count}/>*/}
             {/*// ::::每次都会打印*/}
-            {/*<Greeting  name={count}/>*/}
+            <Greeting  name={count}/>
         </div>
     );
 

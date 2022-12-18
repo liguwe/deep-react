@@ -4,8 +4,8 @@
  ************************************************/
 import React, {useState, useMemo, memo} from "react";
 
-// ::::我根本不需要使用state count，但还是把我给渲染了
-const ChildComponent = (props) => {
+//::::我根本不需要使用state count，但还是把我给渲染了
+const ChildComponent = () => {
     console.log("ChildComponent Running");
     return <div>{`这里是 ChildComponent`}</div>;
 };
